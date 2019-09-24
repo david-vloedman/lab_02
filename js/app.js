@@ -57,17 +57,19 @@ function sanitizeReponse(reponse){
 
     instructionPrompt();
     
-}
+};
 
 function instructionPrompt(){
     alert('Answer questions with a Yes/No or Y/N');
     startQuiz();
 }
 
+function readBio(){
+    welcomeSequence();
+    instructionPrompt();
+};
 
 
-welcomeSequence();
-instructionPrompt();
 
 
 
