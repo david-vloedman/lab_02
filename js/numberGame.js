@@ -14,7 +14,7 @@ var wasCorrect = false;
 // console.log(guess);
 
 
-for (var i = 1; i < 4; i++){
+for (var i = 0; i < 4; i++){
     if(guess === targetNumber){
         alert("You're correct!");
         wasCorrect = true;
@@ -89,9 +89,16 @@ while(attempts < 6){
     var answer2 = parseInt(prompt('Second answer?'));
     var correctAnswers = 0;
     for(var a = 0; a < 5; a++){
-        if(answer1 === answerKey[a]) correctAnswers++;
-        if(answer2 === answerKey[a]) correctAnswers++
-    }
+        if(answer1 === answerKey[a]){
+            correctAnswers++;
+            score++
+        }
+        if(answer2 === answerKey[a])
+        {
+            correctAnswers++;
+            score++;
+        }
+    };
 
     if(correctAnswers === 2){
         alert('Congratulations! Those are correct');
