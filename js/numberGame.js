@@ -69,6 +69,7 @@ if(prompt('Does David like Tennis?') === 'no'){
 
 // console.log(score);
 
+// establish a set of correct answers
 var answerKey = [
     8,
     9,
@@ -78,36 +79,42 @@ var answerKey = [
 ];
 
 
-alert('What numbers are greater than 7, but less than 13? Give two answers.');
+alert('Name two numbers that are greater than 7, but less than 13?');
 
 
 var attempts = 0;
 
-
+// Loop while attempts is less than 6
 while(attempts < 6){
-    var answer1 = parseInt(prompt('First answer?'));
-    var answer2 = parseInt(prompt('Second answer?'));
+    // ask user for their two answers
+    var answer1 = parseInt(prompt('First number?'));
+    var answer2 = parseInt(prompt('Second number?'));
+    // set correct answers to 0 until their response is compared to correct answer
     var correctAnswers = 0;
+    // Loop through all 5 indexes on the array, comparing the answers to a different index each iteration
     for(var a = 0; a < 5; a++){
+        // compare first response user gives to the answerKey[a], where a is the current iteration of the for loop. add one point.
         if(answer1 === answerKey[a]){
             correctAnswers++;
             score++
         }
+        // same as above, but with second user reponse
         if(answer2 === answerKey[a])
         {
             correctAnswers++;
             score++;
         }
     };
-
+    // congratulate user if they gave two correct answers
     if(correctAnswers === 2){
         alert('Congratulations! Those are correct');
+        // if they were correct,the while loop counting attemps is closed and process jumps the next two lines and resumes outside the loop at NEW POINT
         break;
     }
     alert('Try again!');
     attempts++;
 };
-
+//****NEW POINT*****
 alert('Your score is ' + score + 'out of 7');
 
 
