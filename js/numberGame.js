@@ -1,4 +1,5 @@
 // Guessing game
+// NO FUNCTIONS! ARE YOU NOT ENTERTAINED?
 'using strict'
 
 var userName = prompt('What is your name?');
@@ -30,7 +31,7 @@ for (var i = 1; i < 4; i++){
 
 if(!wasCorrect) alert('All out of attempts!');
 
-console.log(score);
+// console.log(score);
 
 alert('Answer questions with yes or no!');
 
@@ -41,7 +42,7 @@ if(prompt('Did David go to school?') === 'yes'){
     alert('Incorrect');
 };
 
-console.log(score);
+// console.log(score);
 
 if(prompt('Did David work as a cable guy?') === 'yes'){
     alert('Correct');
@@ -50,7 +51,7 @@ if(prompt('Did David work as a cable guy?') === 'yes'){
     alert('Incorrect');
 };
 
-console.log(score);
+// console.log(score);
 
 if(prompt('Did David go to Sheldon Highschool?') === 'yes'){
     alert('Correct');
@@ -66,7 +67,7 @@ if(prompt('Does David like Tennis?') === 'no'){
     alert('Incorrect');
 };
 
-console.log(score);
+// console.log(score);
 
 var answerKey = [
     8,
