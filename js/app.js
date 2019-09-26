@@ -1,4 +1,4 @@
-'using strict'
+'using strict';
 
 var userName = prompt('What is your name?');
 alert('Welcome ' + userName);
@@ -22,7 +22,7 @@ for (var i = 0; i < 4; i++){
     if(guess < targetNumber) alert('Too low!');
     if(guess > targetNumber) alert('Too High!');
     guess = parseInt(prompt('Try again!'));
-};
+}
 
 
 
@@ -32,37 +32,37 @@ if(!wasCorrect) alert('All out of attempts!');
 
 alert('Answer questions with yes or no!');
 
-if(prompt('Did David go to school?') === 'yes'){
+if(prompt('Did David go to school?').toLowerCase() === 'yes'){
     alert('Correct');
     score++;
 } else {
     alert('Incorrect');
-};
+}
 
 
 
-if(prompt('Did David work as a cable guy?') === 'yes'){
+if(prompt('Did David work as a cable guy?').toLowerCase() === 'yes'){
     alert('Correct');
     score++;
 } else {
     alert('Incorrect');
-};
+}
 
 
 
-if(prompt('Did David go to Sheldon Highschool?') === 'yes'){
-    alert('Correct');
-    score++
-} else {
-    alert('Incorrect');
-};
-
-if(prompt('Does David like Tennis?') === 'no'){
+if(prompt('Did David go to Sheldon Highschool?').toLowerCase() === 'yes'){
     alert('Correct');
     score++;
 } else {
     alert('Incorrect');
-};
+}
+
+if(prompt('Does David like Tennis?').toLowerCase() === 'no'){
+    alert('Correct');
+    score++;
+} else {
+    alert('Incorrect');
+}
 
 
 var answerKey = [
@@ -80,34 +80,27 @@ alert('Name two numbers that are greater than 7, but less than 13?');
 var attempts = 0;
 
 while(attempts < 6){
-    
     var answer1 = parseInt(prompt('First number?'));
     var answer2 = parseInt(prompt('Second number?'));
-    
     var correctAnswers = 0;
-    
     for(var a = 0; a < 5; a++){
-        
         if(answer1 === answerKey[a]){
             correctAnswers++;
-            score++
-        }
-        
+            score++;
+        }        
         if(answer2 === answerKey[a])
         {
             correctAnswers++;
             score++;
         }
-    };
-    
+    }    
     if(correctAnswers === 2){
         alert('Congratulations! Those are correct');
-        
         break;
     }
     alert('Try again!');
     attempts++;
-};
+}
 
 alert('Your score is ' + score + ' out of 7');
 
