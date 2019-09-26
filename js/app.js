@@ -26,7 +26,7 @@ for (var i = 0; i < 4; i++){
 
 
 
-if(!wasCorrect) alert('All out of attempts!');
+if(!wasCorrect) alert('All out of attempts! The correct answer was ' + targetNumber + '.');
 
 
 
